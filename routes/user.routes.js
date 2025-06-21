@@ -8,7 +8,7 @@ userRouter.get('/',getUsers);
 
 userRouter.get('/:id',authorize,getUser)
 
-userRouter.post('/:id',(req,res)=>{
+userRouter.post('/',(req,res)=>{
     res.send({title:'Create new user'});
 })
 

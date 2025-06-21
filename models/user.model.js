@@ -11,6 +11,7 @@ name:{
 email:{
     type:String,
     required:[true,'Email is required'],
+    unique:true,
     trim:true, //to trim empty spaces
     lowerCase:true,
     match:[/\S+@\S+\.\S+/,'Please fill a valid email address']
@@ -18,7 +19,7 @@ email:{
 password:{
     type:String,
     required:[true,'User password is required'],
-    minLength:6
+    minLength:6,
 }
 },{timestamps:true}) 
 
