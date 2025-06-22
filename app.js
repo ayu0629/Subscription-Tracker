@@ -10,6 +10,7 @@ import arcjetMiddleware from './middleware/arcjet.middleware.js';
 import workflowRouter from './routes/workflow.routes.js';
 
 const app=express();
+app.set("trust proxy", true);
 
 app.use(express.json()); //this is built-in middleware which handles json data sent in requests
 app.use(express.urlencoded({extended:false})); //helps to process the form data sent via HTML forms in simple format
