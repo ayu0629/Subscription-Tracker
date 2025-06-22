@@ -34,7 +34,7 @@ export const getUserSubscription=async(req,res,next)=>
         if(req.user.id !== req.params.id)
         {
             const error=new Error('You are not the owner of this account');
-            error.status=401;
+            error.statusCode=401;
             throw error;
         }
 
